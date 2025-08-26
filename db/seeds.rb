@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+puts "Cleaning database..."
+Chat.destroy_all
+puts "Creating Chats..."
+Chat.create!(chat_title: "Chat 1")
+puts "Created Chat1"
+puts "Finished! Created #{Chat.count} Chats."
