@@ -1,4 +1,12 @@
 class ChatsController < ApplicationController
+
+  # def index
+  #   @chat = Chat.find(param[:chat_id])
+  #   # @chats =  current_user.chats.where(challenge: @challenge)
+  #   @message = Message.new
+  # end
+
+
   def show
     @chat = Chat.find(params[:id])
     @message = Message.new
