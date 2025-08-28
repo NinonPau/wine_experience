@@ -13,4 +13,10 @@ class ChatsController < ApplicationController
     @chat = Chat.find(params[:id])
     @message = Message.new
   end
+
+  private
+
+  def chat_params
+   params.require(:chats).permit(:chat_title)
+  end
 end
