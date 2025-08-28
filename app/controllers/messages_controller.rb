@@ -8,13 +8,12 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    @message.save
-    # @message.chat = @chat
-    # if @message.save
-    #   redirect_to chat_path(@chat)
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
+    @message.chat = @chat
+    if @message.save
+      redirect_to chat_path(@chat)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private

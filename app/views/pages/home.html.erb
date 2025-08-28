@@ -1,7 +1,6 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-<%= simple_form_for [@chat] do |f| %>
-  <%= link_to "New chat", root_path , class: "btn btn-primary" %>
-<%# <%= link_to "New chat", chat_path(@chat) , class: "btn btn-primary" %>
+<%= simple_form_for @chat do |f| %>
+  <%= f.submit "New chat", class: "btn btn-primary" %>
 <% end %>

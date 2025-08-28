@@ -6,6 +6,6 @@
   <%= f.submit "Send message", class: "btn btn-primary" %>
 <% end %>
 
-<%= @chat.messages.each do |message| %>
+<% @chat.messages.each do |message| %>
   <%= message.content  %>
 <% end %>
