@@ -1,1 +1,7 @@
 <h1>hello from chat new</h1>
+
+<h1>New Chat</h1>
+<%= simple_form_for @chat do |f| %>
+  <%= f.input :chat_title %>
+  <%= f.submit "Chat", class: "btn btn-primary" %>
+<% end %>
