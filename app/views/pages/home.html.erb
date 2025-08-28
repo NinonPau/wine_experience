@@ -1,4 +1,6 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-<%# Hello from Carlo %>
+<%= simple_form_for @chat do |f| %>
+  <%= f.submit "New chat", class: "btn btn-primary" %>
+<% end %>

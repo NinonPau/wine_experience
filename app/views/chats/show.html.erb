@@ -1,1 +1,11 @@
 <h1>hello from chat show</h1>
+
+<h1>New Chat</h1>
+<%= simple_form_for [@chat, @message] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit "Send message", class: "btn btn-primary" %>
+<% end %>
+
+<% @chat.messages.each do |message| %>
+  <%= message.content  %>
+<% end %>
