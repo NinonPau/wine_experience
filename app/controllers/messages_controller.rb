@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_action :set_chat, only: %i[new create]
 
+
   SYSTEM_PROMPT = <<~PROMPT
     You are a Sommelier.
 
