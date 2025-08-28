@@ -5,7 +5,11 @@
 
 
   <div class="Option-Card">
-    <h1>Start Wine-O-Bot</h1>
+
+    <%= simple_form_for @chat do |f| %>
+      <%= f.submit "Start Wine-O-Bot", class: "btn btn-warning" %>
+    <% end %>
+
   </div>
 
   <div class="Option-Card">
@@ -13,9 +17,4 @@
   </div>
 
 
-
-
 </div>
-<%= simple_form_for @chat do |f| %>
-  <%= f.submit "New chat", class: "btn btn-primary" %>
-<% end %>
