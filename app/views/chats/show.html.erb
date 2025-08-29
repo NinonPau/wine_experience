@@ -1,5 +1,7 @@
 <%= link_to "← Back", root_path %> /
-
+<% ["ruggeri-giustino-b.-valdobbiadene-prosecco-superiore-2020_1_1_1_vylhfw", "2020-05-05_19.27.20_1_1_lj6nm5", "excellens-rose_1_1_1_jrvcfy", "SPR-EATS-best-wines-with-steak-5079768-ea7c3e6cd2b247dfa4978ff985f416c0_n5lpqq", "cloudy-bay-chardonnay-2020_1_1_vgzibz"].each do |img| %>
+  <%= cl_image_tag(img, width: 400, height: 300, crop: :fill) %>
+<% end %>
 <div>
   <h1><%= @chat.chat_title %></h1>
   <% if Rails.env.development? %>
@@ -17,6 +19,6 @@
 <% end %>
 
 <% @chat.messages.each do |message| %>
-  <%= cl_image_tag("best-wines-with-steak", width: 400, height: 300, crop: :fill) %>
+
   <%= message.content  %>
 <% end %>
