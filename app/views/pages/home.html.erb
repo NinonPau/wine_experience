@@ -1,17 +1,28 @@
-
+<% home_banner_img = 'https://media.istockphoto.com/id/991732782/photo/close-up-of-sommelier-serving-red-wine-at-fine-dining-restaurant.jpg?s=612x612&w=0&k=20&c=KPTJbmK7ryWZczvKJXkvCiwtc_BcX0oqJJN91qG2yVw=' %>
+<%= render "shared/banner", h1: "Wine Experience", p: "The Wine-O-Bot is your personnal AI Sommelier.", image_url: home_banner_img %>
 <div class="Options-Container">
 
-    <h1 id="Headline">This is the Wine-O-Bot</h1>
+    <h1 id="Headline">Welcome fellow Sommelier's</h1>
 
 
-  <div class="Option-Card">
+  <div class="Option-Card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+
     <%= simple_form_for @chat do |f| %>
-      <%= f.submit "Start Wine-O-Bot", class: "btn btn-warning" %>
+      <%= f.submit "Open Chat with Chatbot", class: "btn btn-warning" %>
     <% end %>
+
   </div>
 
-  <div class="Option-Card">
-    <h1>View History</h1>
+
+
+  <div class="Option-Card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+    <h1>
+
+    <%= simple_form_for @chat do |f| %>
+      <%= f.submit "View History", class: "btn btn-warning" %>
+    <% end %>
+
+    </h1>
   </div>
 
 
