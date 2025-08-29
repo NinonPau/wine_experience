@@ -13,8 +13,10 @@
 <%= simple_form_for [@chat, @message] do |f| %>
   <%= f.input :content %>
   <%= f.submit "Send message", class: "btn btn-primary" %>
+
 <% end %>
 
 <% @chat.messages.each do |message| %>
+  <%= cl_image_tag("best-wines-with-steak", width: 400, height: 300, crop: :fill) %>
   <%= message.content  %>
 <% end %>
