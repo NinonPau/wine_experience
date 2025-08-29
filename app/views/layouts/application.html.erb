@@ -24,10 +24,11 @@
                   data: {action: "click->toggle#call", toggle_target: "show"} do %>
             <i class="fa-regular fa-square-caret-right"></i>
           <% end %>
-          <%= yield %>
         </div>
       </div>
     </div>
+    <%= render "shared/banner" %>
+    <%= yield %>
 
   </body>
 
