@@ -56,6 +56,8 @@ gem "ruby_llm"
 
 group :development, :test do
   gem "dotenv-rails"
+  # add cloudinary
+  gem "cloudinary"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
 end
@@ -76,4 +78,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-

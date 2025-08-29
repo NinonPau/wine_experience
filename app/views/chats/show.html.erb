@@ -1,7 +1,11 @@
 <%= link_to "← Back", root_path %> /
+
 <% show_banner_img = 'https://images.pexels.com/photos/5847674/pexels-photo-5847674.jpeg' %>
 <%= render "shared/banner", h1: "Wine-O-Bot", p: "Please ask your personnal sommelier for a recommendation.", image_url: show_banner_img %>
 
+<% ["ruggeri-giustino-b.-valdobbiadene-prosecco-superiore-2020_1_1_1_vylhfw", "2020-05-05_19.27.20_1_1_lj6nm5", "SPR-EATS-best-wines-with-steak-5079768-ea7c3e6cd2b247dfa4978ff985f416c0_n5lpqq", "cloudy-bay-chardonnay-2020_1_1_vgzibz"].each do |img| %>
+  <%= cl_image_tag(img, width: 400, height: 300, crop: :fill) %>
+<% end %>
 <div>
   <h1><%= @chat.chat_title %></h1>
   <% if Rails.env.development? %>
@@ -15,8 +19,10 @@
 <%= simple_form_for [@chat, @message] do |f| %>
   <%= f.input :content %>
   <%= f.submit "Send message", class: "btn btn-primary" %>
+
 <% end %>
 
 <% @chat.messages.each do |message| %>
+
   <%= message.content  %>
 <% end %>
