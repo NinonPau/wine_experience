@@ -1,4 +1,6 @@
 <%= link_to "← Back", root_path %> /
+<% show_banner_img = 'https://images.pexels.com/photos/5847674/pexels-photo-5847674.jpeg' %>
+<%= render "shared/banner", h1: "Wine-O-Bot", p: "Please ask your personnal sommelier for a recommendation.", image_url: show_banner_img %>
 
 <div>
   <h1><%= @chat.chat_title %></h1>
