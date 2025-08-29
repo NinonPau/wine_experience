@@ -1,4 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
-<%# Hello from Carlo %>
+<div class="Options-Container">
+
+    <h1 id="Headline">This is the Wine-O-Bot</h1>
+
+
+  <div class="Option-Card">
+    <%= simple_form_for @chat do |f| %>
+      <%= f.submit "Start Wine-O-Bot", class: "btn btn-warning" %>
+    <% end %>
+  </div>
+
+  <div class="Option-Card">
+    <h1>View History</h1>
+  </div>
+
+
+</div>

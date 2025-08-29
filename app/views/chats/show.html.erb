@@ -1,1 +1,20 @@
-<h1>hello from chat show</h1>
+<%= link_to "← Back", root_path %> /
+
+<div>
+  <h1><%= @chat.chat_title %></h1>
+  <% if Rails.env.development? %>
+  <span class="float-end">
+    <%# Input tokens:  @input_tokens  / Output tokens:  @output_tokens/ Context window:  @context_window  %>
+  </span>
+  <% end %>
+</div>
+
+<h1>New Chat</h1>
+<%= simple_form_for [@chat, @message] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit "Send message", class: "btn btn-primary" %>
+<% end %>
+
+<% @chat.messages.each do |message| %>
+  <%= message.content  %>
+<% end %>
