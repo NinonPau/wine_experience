@@ -1,6 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-image: linear-gradient(to right, $light-brown, $light-beige);
+  p {
+    color: $light-beige;
+  }
+  .nav-link {
+    color: $dark-brown;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +15,15 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.dropdown-menu {
+  background-color: $light-beige;
+  .dropdown-item {
+    color: $dark-brown;
+    &:hover {
+      background-color: $dark-brown;
+      color: $light-beige;
+    }
+  }
 }
